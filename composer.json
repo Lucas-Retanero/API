@@ -1,0 +1,16 @@
+{
+    "name": "api/backend",
+    "description": "Api com switch case",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Api\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Retanero"
+        }
+    ],
+    "require": {}
+}

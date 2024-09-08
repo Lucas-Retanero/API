@@ -39,7 +39,7 @@ switch ($method) {
                 $soma5 = new UserController();
                 $resposta = $soma5->insertUsers();
                 http_response_code(200);
-                echo json_encode(['status'=> true, 'message'=>'Recebido POST', 'Idade Atualizada' => $soma5->insertUser($post)]);
+                echo json_encode(['status'=> true, 'message'=>'Recebido POST', 'Idade Atualizada' => $soma5->insertUser($resposta)]);
                 break;
             
             case '/produtos':

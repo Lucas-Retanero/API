@@ -4,8 +4,8 @@ class UserController {
 
     public function getUsers(){
         return [
-            ['nome'=> 'Lucas', 'idade'=> '19'],
-            ['nome'=> 'G Castro', 'idade'=> '18'],
+            ['nome'=> 'Lucas', 'idade'=> 19],
+            ['nome'=> 'G Castro', 'idade'=> 18],
         ];
     }
 

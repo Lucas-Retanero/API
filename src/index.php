@@ -37,7 +37,7 @@ switch ($method) {
             case '/users':
                 $data = json_decode(file_get_contents('php://input'), true);
                 $soma5 = new UserController();
-                $resposta = $soma5->insertUsers();
+                $resposta = $soma5->getUsers();
                 http_response_code(200);
                 echo json_encode(['status'=> true, 'message'=>'Recebido POST', 'Idade Atualizada' => $soma5->insertUser($resposta)]);
                 break;
@@ -60,8 +60,8 @@ switch ($method) {
                     $data = json_decode(file_get_contents('php://input'), true);
                     http_response_code(200);
                     $soma10 = new UserController();
-                    $put = $soma10->putUser();
-                    echo json_encode(['status'=> true, 'message'=>'Recebido', 'Idade atualizada' => $soma10->putUser($put)]);
+                    $put = $soma10->getUsers();
+                    echo json_encode(['status'=> true, 'message'=>'Recebido PUT', 'Idade atualizada' => $soma10->putUser($put)]);
                     break;
                 //}
                 default:
@@ -75,7 +75,7 @@ switch ($method) {
             //$id = $match[1];
             $data = json_decode(file_get_contents('php://input'), true);
             $tira5 = new UserController();
-            $del = $tira5->deleteUser();
+            $del = $tira5->getUsers();
             http_response_code(200);
             echo json_encode(['status'=> true, 'message'=>'Deletado', 'Idade atualizada' => $tira5->deleteUser($del)]);
             break;
